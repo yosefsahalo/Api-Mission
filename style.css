@@ -1,0 +1,91 @@
+#mainDiv{
+    display: flex;
+    flex-flow:wrap;
+    justify-content: center;
+    justify-content: space-between;
+}
+#mainDiv img:hover{
+    cursor: pointer;
+}
+.cards{
+    width: 25%;
+    margin: 10px;
+    box-shadow: -1px -1px 20px 6px black;
+    text-align: center;
+    border-radius: 5px;
+}
+.cardUserHeadLine{
+    font-style: italic;
+    font-weight: bolder; 
+}
+#navi{
+    display: flex;
+    justify-content: space-between;
+}
+#navi a{
+    text-decoration: none;
+    background: rgba(0, 0, 255, 0.329);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    box-shadow: -1px -1px 20px 6px black;
+} 
+#navi a:hover{
+    background: rgba(255, 255, 255, 0.24);
+    color: rgba(0, 0, 255, 0.329);
+}
+table,td,th{
+    border: 1px solid black;
+    text-align: center;
+}
+#tabelId{
+    margin: auto;
+}
+#formDiv{
+    display: flex;
+    margin: auto;
+}
+#forms{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+label{
+    text-align: center;
+}
+input[type="image"]{
+    margin: auto;
+}
+.cardUserOnly{
+    width: 30%;
+    margin: 10px;
+    box-shadow: -1px -1px 20px 6px rgba(0, 0, 255, 0.438);
+    text-align: center;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 125px;  
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+}
+#head img{
+    width: 80px;
+    border-radius: 50%;
+}
+#foot{
+    background: rgba(128, 128, 128, 0.534);
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    bottom: 0px;
+    margin-top: 150px;
+    box-shadow: -1px -1px 20px 6px black;
+    border-radius: 10px;
+}
+#foot a i{
+    color: black;
+}
+#foot a i:hover{
+    color: white;
+}
