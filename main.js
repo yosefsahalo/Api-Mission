@@ -112,9 +112,8 @@ function checkSubmit() {
 
 
 // פונקציה המציגה את הכרטיס של המשתמש
-async function showUserCardInfotmation(cardIndex) {
+function showUserCardInfotmation(cardIndex) {
     document.getElementById('mainDiv').innerHTML = '';
-    try {
         getUsersObjectFromApi().then(users => {
             let foundUser = null;
             for (let user of users) {
@@ -134,8 +133,4 @@ async function showUserCardInfotmation(cardIndex) {
                 console.log(foundUser.name.first);
             }
         });
-    }
-    finally {
-
-    }
 }
