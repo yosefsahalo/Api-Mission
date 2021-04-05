@@ -5,7 +5,22 @@ function getUsersObjectFromApi() {
         .then((res) => { return res.json() })
 }
 
-
+class UserObjectCard {
+    firstName;
+    lastName;
+    age;
+    image;
+    email;
+    phone;
+    constructor(first_Name, last_Name, email_, age_, phone_, image_) {
+        this.firstName = first_Name;
+        this.lastName = last_Name;
+        this.age = age_;
+        this.image = image_;
+        this.email = email_;
+        this.phone = phone_;
+    }
+}
 //api פונקציה המציגה את הנתונים מ
 let infroUserObjectArray = [];
 async function printUsersInformation() {
@@ -14,6 +29,8 @@ async function printUsersInformation() {
     try {
         infroUserObjectArray = await getUsersObjectFromApi();
         infroUserObjectArray.forEach((arrayKey) => {
+            let UserObjectCardApi = new UserObjectCard(arrayKey.name.first, arrayKey.name.last,arrayKey.email,arrayKey.age,arrayKey.phone,arrayKey.picture)
+            console.log(UserObjectCardApi);
             document.getElementById('mainDiv').innerHTML += `<div class ="cards" id ="card${arrayKey.index}">
             <h3 class="cardUserHeadLine">Full Name:</h3>${arrayKey.name.first} ${arrayKey.name.last}
             <p class="cardUserHeadLine">email:</p>${arrayKey.email}
@@ -134,20 +151,3 @@ function showUserCardInfotmation(cardIndex) {
         }
     });
 }
-
-
-
-
-
-
-// class User {
-//     constructor(firstName, lastName, age, image, email, phone) {
-//       this.firstName = firstName;
-//       this.lastName = lastName;
-//       this.age = age;
-//       this.image = image;
-//       this.email = email;
-//       this.phone = phone;
-//     }
-//   }
-  
