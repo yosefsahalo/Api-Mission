@@ -114,15 +114,15 @@ function checkSubmit() {
 // פונקציה המציגה את הכרטיס של המשתמש
 function showUserCardInfotmation(cardIndex) {
     document.getElementById('mainDiv').innerHTML = '';
-        getUsersObjectFromApi().then(users => {
-            let foundUser = null;
-            for (let user of users) {
-                if (user.index == cardIndex) {
-                    foundUser = user;
-                }
+    getUsersObjectFromApi().then(users => {
+        let foundUser = null;
+        for (let user of users) {
+            if (user.index == cardIndex) {
+                foundUser = user;
             }
-            if (foundUser != null) {
-                document.getElementById('unMainDiv').innerHTML += `<div class="cardUserOnly">
+        }
+        if (foundUser != null) {
+            document.getElementById('unMainDiv').innerHTML += `<div class="cardUserOnly">
                    <h3 class="cardUserHeadLine">Full Name:</h3>${foundUser.name.first} ${foundUser.name.last}
                    <p class="cardUserHeadLine">email:</p>${foundUser.email}
                    <p class="cardUserHeadLine">Age:</p>${foundUser.age}
@@ -130,7 +130,24 @@ function showUserCardInfotmation(cardIndex) {
                    <img src=${foundUser.picture} height="150px" width="150px">
                    </div>`
 
-                console.log(foundUser.name.first);
-            }
-        });
+            console.log(foundUser.name.first);
+        }
+    });
 }
+
+
+
+
+
+
+// class User {
+//     constructor(firstName, lastName, age, image, email, phone) {
+//       this.firstName = firstName;
+//       this.lastName = lastName;
+//       this.age = age;
+//       this.image = image;
+//       this.email = email;
+//       this.phone = phone;
+//     }
+//   }
+  
